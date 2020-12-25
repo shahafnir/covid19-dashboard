@@ -1,0 +1,81 @@
+<div class="small-card">
+  <div class="content">
+    <div class="first-section">
+      <div class="header">
+        <div class="title">אחוז בדיקות חיוביות אתמול</div>
+        <div class="info">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+            viewBox="0 0 24 24"
+            class="eva eva-info"
+            fill="currentColor"
+          >
+            <g data-name="Layer 2">
+              <g data-name="info">
+                <rect
+                  width="24"
+                  height="24"
+                  transform="rotate(180 12 12)"
+                  opacity="0"
+                ></rect>
+                <path
+                  d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14a1 1 0 0 1-2 0v-5a1 1 0 0 1 2 0zm-1-7a1 1 0 1 1 1-1 1 1 0 0 1-1 1z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+          <div class="tooltiptext">
+            אחוז הבדיקות החיוביות מתוך סך הבדיקות לגילוי הנגיף בפעם הראשונה לכל
+            נבדק, שתוצאותיהן התקבלו משעה 00:00 עד שעה 23:59 של יום אתמול
+            <br /><br />
+            בדיקות אתמול - מספר תוצאות של בדיקות, הן לבדיקה לזיהוי ראשוני של
+            הנגיף והן לבדיקה נלוות לקביעת החלמה, שהתקבלו החל מחצות 00:00 עד שעה
+            23:59 של יום אתמול
+          </div>
+        </div>
+      </div>
+      <h5 class="total-amount">{{ 0.041 | percent }}</h5>
+      <div class="changes">
+        <span class="amount">{{ 93957 | number }}</span>
+        <span class="text">בדיקות אתמול</span>
+      </div>
+    </div>
+    <div class="second-section">
+      <div class="graph">
+        <div class="graph-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100%"
+            height="100%"
+            viewBox="0 0 24 24"
+            class="eva eva-bar-chart-2"
+            fill="currentColor"
+          >
+            <g data-name="Layer 2">
+              <g data-name="bar-chart-2">
+                <rect
+                  width="24"
+                  height="24"
+                  transform="rotate(90 12 12)"
+                  opacity="0"
+                ></rect>
+                <path
+                  d="M12 8a1 1 0 0 0-1 1v11a1 1 0 0 0 2 0V9a1 1 0 0 0-1-1z"
+                ></path>
+                <path
+                  d="M19 4a1 1 0 0 0-1 1v15a1 1 0 0 0 2 0V5a1 1 0 0 0-1-1z"
+                ></path>
+                <path
+                  d="M5 12a1 1 0 0 0-1 1v7a1 1 0 0 0 2 0v-7a1 1 0 0 0-1-1z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="graph-label">בדיקות יומיות</div>
+      </div>
+    </div>
+  </div>
+</div>

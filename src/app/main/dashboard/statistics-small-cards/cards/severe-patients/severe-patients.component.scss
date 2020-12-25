@@ -1,0 +1,114 @@
+.small-card .content {
+  .first-section {
+    .header {
+      .info {
+        .tooltiptext {
+          right: -80px;
+        }
+      }
+    }
+
+    .changes {
+    }
+  }
+
+  .second-section {
+    .patients-by-severity {
+      .item {
+        display: flex;
+        flex-direction: row;
+        font-size: 0.7rem;
+
+        .circle {
+          min-width: 7px;
+          max-height: 7px;
+          margin-top: 5px;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+        }
+
+        .label {
+          margin-right: 5px;
+        }
+
+        .amount {
+          margin-right: 3px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and(min-width: 416px) {
+  .small-card .content {
+    margin-top: 1px;
+    .first-section {
+      .header {
+        .info {
+          .tooltiptext {
+          }
+        }
+      }
+
+      .changes {
+      }
+    }
+
+    .second-section {
+      .patients-by-severity {
+        margin-bottom: 5px;
+        margin-right: 5px;
+
+        .item {
+          font-size: 0.82rem;
+          .circle {
+            min-width: 8px;
+            max-height: 8px;
+          }
+
+          .label {
+          }
+
+          .amount {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and(min-width: 992px) {
+  .small-card .content {
+    margin-top: 0;
+    .first-section {
+      .header {
+        .info {
+          .tooltiptext {
+          }
+        }
+      }
+
+      .changes {
+      }
+    }
+
+    .second-section {
+      .patients-by-severity {
+        .item {
+          .circle {
+          }
+
+          .label {
+          }
+
+          .amount {
+          }
+        }
+      }
+    }
+  }
+}

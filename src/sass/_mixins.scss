@@ -1,0 +1,39 @@
+@mixin light-theme {
+  --scrollbar-background-color: transparent !important;
+  --background-color-main: #edf1f7;
+  --text-color-default: #222b45;
+  --font-size-big: 33px;
+  --side-nav-selected-color: #19d6e5;
+  --small-card-background: #fff;
+  --small-card-info-icon-color: #bcbcbc;
+  --small-card-box-shadow: none;
+  --small-card-graph-icon-color-active: #dbd2b8;
+  --small-card-graph-icon-background: none;
+  --small-card-graph-icon-background-active: #000;
+  --small-card-tooltip-background: #fff;
+  --small-card-tooltip-border: 0.5px solid #686565;
+  --small-card-graph-window-background: #fff;
+  --small-card-graph-window-arrow-outer-color: #d1d0d0;
+  --small-card-graph-window-arrow-inner-color: #fff;
+  --small-card-graph-window-box-shadow: #0000005c 0 0 20px 0;
+}
+
+@mixin dark-theme {
+  --scrollbar-background-color: #151b2f !important;
+  --background-color-main: #49667a;
+  --text-color-default: #fff;
+  --font-size-big: 33px;
+  --side-nav-selected-color: #a2f888;
+  --small-card-background: #384f5f;
+  --small-card-info-icon-color: #fff;
+  --small-card-box-shadow: #1a1f332e 0px 8px 4px 0px;
+  --small-card-graph-icon-color-active: #000;
+  --small-card-graph-icon-background: #2c3a46;
+  --small-card-graph-icon-background-active: #d2c3b8;
+  --small-card-tooltip-background: #384f5f;
+  --small-card-tooltip-border: 0.5px solid #c7c3c3;
+  --small-card-graph-window-background: #384f5f;
+  --small-card-graph-window-arrow-outer-color: #384f5f;
+  --small-card-graph-window-arrow-inner-color: #384f5f;
+  --small-card-graph-window-box-shadow: #0000005c 0 0 20px 0;
+}

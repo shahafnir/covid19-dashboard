@@ -1,0 +1,17 @@
+.dashboard-container {
+  min-width: 300px;
+  overflow: hidden;
+  color: var(--text-color-default);
+}
+
+@media only screen and (min-width: 416px) {
+  .dashboard-container {
+    padding: 6px 11px 8px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .dashboard-container {
+    padding: 26px 31px;
+  }
+}

@@ -1,0 +1,15 @@
+@import "./variables";
+@import "./mixins";
+@import "./fonts.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  direction: rtl;
+  font-family: $font-family-default;
+  -webkit-font-smoothing: antialiased;
+}

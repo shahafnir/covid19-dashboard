@@ -1,0 +1,67 @@
+.small-card {
+  .content {
+    .first-section {
+      .header {
+        .info {
+          .tooltiptext {
+            right: -100px;
+          }
+        }
+      }
+      .total-amount {
+        margin-top: 8px;
+      }
+
+      .changes {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 493px) {
+  .small-card {
+    .content {
+      .first-section {
+        .header {
+          .info {
+            .tooltiptext {
+            }
+          }
+        }
+        .total-amount {
+          margin-top: 6px;
+        }
+
+        .changes {
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .small-card {
+    .content {
+      .first-section {
+        .header {
+          .title {
+            margin-left: 2px;
+          }
+
+          .info {
+            margin-left: 5px;
+            .tooltiptext {
+            }
+          }
+        }
+        .total-amount {
+          margin-top: 8px;
+        }
+
+        .changes {
+        }
+      }
+    }
+  }
+}

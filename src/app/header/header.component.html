@@ -1,0 +1,23 @@
+<div class="line"></div>
+<div class="header-container">
+  <div class="logo-container">
+    <div class="nav-button" (click)="onExpandSideNav()">
+      <img src="{{ navButtonImage }}" alt="nav button" />
+    </div>
+    <img
+      src="../../assets/images/header/logo_DAshboard-01.png"
+      alt="לוגו משרד הבריאות"
+      class="logo"
+    />
+  </div>
+  <div class="title-container">
+    <a href="#" class="title">נגיף הקורונה בישראל - תמונת מצב כללית</a>
+    <div class="sub-title">עדכון אחרון: 10 בדצמבר 2020 | 12:48</div>
+  </div>
+  <div class="change-theme-button-container">
+    <button [ngClass]="{ 'dark-theme': isDarkTheme }" (click)="onChangeTheme()">
+      <span class="text" *ngIf="!isDarkTheme">לתצוגה נגישה</span>
+      <span class="text" *ngIf="isDarkTheme">לתצוגה רגילה</span>
+    </button>
+  </div>
+</div>

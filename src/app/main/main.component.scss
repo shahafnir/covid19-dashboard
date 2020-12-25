@@ -1,0 +1,51 @@
+@import "../../sass/styles.scss";
+
+.main::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-background-color);
+}
+
+.main::-webkit-scrollbar {
+  width: 7px;
+  height: 17px;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background-color: #969696 !important;
+  border-radius: 15px !important;
+  -webkit-border-radius: 15px !important;
+  -moz-border-radius: 15px !important;
+  -ms-border-radius: 15px !important;
+  -o-border-radius: 15px !important;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  padding-top: 132px;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--background-color-main);
+
+  .side-nav {
+    max-width: 85.5px;
+  }
+
+  .dashboard {
+    width: 100%;
+  }
+
+  &.light-theme {
+    @include light-theme;
+  }
+
+  &.dark-theme {
+    @include dark-theme;
+  }
+}
+
+@media only screen and (min-width: 981px) {
+  .main {
+    padding-top: 76px;
+  }
+}

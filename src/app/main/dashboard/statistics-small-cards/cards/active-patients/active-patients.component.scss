@@ -1,0 +1,129 @@
+.small-card .content {
+  .first-section {
+    .header {
+      .info {
+        .tooltiptext {
+          left: 0;
+        }
+      }
+    }
+
+    .changes {
+    }
+  }
+
+  .second-section {
+    .patients-per-location {
+      display: flex;
+
+      .item {
+        font-size: 0.7rem;
+        margin-left: 10px;
+
+        .label {
+        }
+
+        .amount {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 416px) {
+  .small-card {
+    padding-bottom: 4px;
+
+    .content {
+      .first-section {
+        .changes {
+        }
+      }
+
+      .second-section {
+        .patients-per-location {
+          .item {
+            font-size: 0.82rem;
+            margin-left: 20px;
+
+            .label {
+            }
+
+            .amount {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .small-card {
+    padding-bottom: 16px;
+
+    .content {
+      .changes {
+      }
+
+      .patients-per-location {
+        .item {
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 497px) {
+  .small-card {
+    .content {
+      .first-section {
+        .header {
+          .info {
+            .tooltiptext {
+              left: -100px;
+            }
+          }
+        }
+        .changes {
+        }
+
+        .patients-per-location {
+          .item {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .small-card .content {
+    .first-section {
+      .header {
+        .info {
+          .tooltiptext {
+            left: -110px;
+          }
+        }
+      }
+
+      .changes {
+      }
+    }
+
+    .second-section {
+      .patients-per-location {
+        .item {
+          .label {
+          }
+
+          .amount {
+          }
+        }
+      }
+    }
+  }
+}

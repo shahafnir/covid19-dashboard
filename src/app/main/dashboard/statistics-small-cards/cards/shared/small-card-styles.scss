@@ -1,0 +1,387 @@
+.small-card {
+  height: 11.5rem;
+  margin: 0 0 20.8px 10px;
+  padding: 11px;
+  line-height: 20px;
+  background-color: var(--small-card-background);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: var(--small-card-box-shadow);
+
+  .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .first-section {
+      .header {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 6px;
+
+        .title {
+          font-size: 14.4px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+
+        .info {
+          position: relative;
+          width: 20px;
+          margin-right: 5px;
+          padding-top: 2px;
+
+          svg {
+            fill: var(--small-card-info-icon-color);
+            width: 20px;
+            height: 20px;
+          }
+
+          .tooltiptext {
+            width: 250px;
+            left: -100px;
+            position: absolute;
+            visibility: hidden;
+            margin-top: 10px;
+            background-color: var(--small-card-tooltip-background);
+            font-size: 12px;
+            border: var(--small-card-tooltip-border);
+            padding: 8px 12px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            z-index: 1;
+            opacity: 0;
+            transition: all 0.2s ease-in;
+            -webkit-transition: all 0.2s ease-in;
+            -moz-transition: all 0.2s ease-in;
+            -ms-transition: all 0.2s ease-in;
+            -o-transition: all 0.2s ease-in;
+          }
+
+          &:hover {
+            .tooltiptext {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .total-amount {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 17.6px;
+      }
+
+      .changes {
+        margin-top: 0;
+        font-size: 0.6rem;
+
+        .amount {
+          font-weight: 700;
+          padding: 0 2px;
+        }
+
+        .text {
+          padding: 0 2px;
+        }
+      }
+    }
+
+    .second-section {
+      .graph {
+        position: relative;
+        width: fit-content;
+        margin-bottom: 2px;
+        display: flex;
+        align-items: flex-end;
+        align-items: center;
+        cursor: pointer;
+
+        .graph-icon {
+          height: 25px;
+          width: 25px;
+          background-color: var(--small-card-graph-icon-background);
+          border-radius: 50%;
+          border: 1px solid #97979738;
+          padding: 4px;
+          margin-left: 5px !important;
+          transition: all 0.5s;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -o-transition: all 0.5s;
+
+          svg {
+            margin-bottom: 2px;
+          }
+        }
+
+        .graph-label {
+          font-size: 0.9rem;
+          text-align: center;
+        }
+
+        .graph-window {
+          visibility: hidden;
+          position: absolute;
+          width: calc(100vw - 20px) !important;
+          height: 342px;
+          top: 41px;
+          left: -37px;
+          background-color: var(--small-card-graph-window-background);
+          border-radius: 12px !important;
+          -webkit-border-radius: 12px !important;
+          -moz-border-radius: 12px !important;
+          -ms-border-radius: 12px !important;
+          -o-border-radius: 12px !important;
+          box-shadow: var(--small-card-graph-window-box-shadow);
+          cursor: default;
+          z-index: 1;
+
+          .arrow {
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: -22px;
+            left: calc(50% - 11px);
+            border: 0 solid transparent;
+            border: 11px solid transparent;
+            border-bottom: 11px solid
+              var(--small-card-graph-window-arrow-outer-color);
+
+            &::after {
+              position: absolute;
+              width: 0;
+              height: 0;
+              top: -5px;
+              left: calc(50% - 8px);
+              border: 0 solid transparent;
+              border: 8px solid transparent;
+              border-bottom: 8px solid
+                var(--small-card-graph-window-arrow-inner-color);
+              z-index: 3;
+              content: "";
+            }
+          }
+
+          .graph-title {
+            padding: 15px;
+            font-size: 18px;
+            margin: 2px 0 8px;
+          }
+        }
+      }
+    }
+  }
+
+  &.graph-expanded {
+    box-shadow: 0 0 9px 2px #00000091;
+    transition: box-shadow 0.5s;
+    -webkit-transition: box-shadow 0.5s;
+    -moz-transition: box-shadow 0.5s;
+    -ms-transition: box-shadow 0.5s;
+    -o-transition: box-shadow 0.5s;
+
+    .content {
+      .first-section {
+        .header {
+          .title {
+          }
+
+          .info {
+            svg {
+            }
+
+            .tooltiptext {
+            }
+
+            &:hover {
+              .tooltiptext {
+              }
+            }
+          }
+        }
+
+        .total-amount {
+        }
+
+        .changes {
+          .amount {
+          }
+
+          .text {
+          }
+        }
+      }
+
+      .second-section {
+        .graph {
+          .graph-icon {
+            background-color: var(--small-card-graph-icon-background-active);
+            color: var(--small-card-graph-icon-color-active);
+
+            svg {
+            }
+          }
+
+          .graph-label {
+          }
+
+          .graph-window {
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 416px) {
+  .small-card {
+    margin-right: 10px;
+    padding-top: 16px;
+    padding-right: 16px;
+
+    .content {
+      .first-section {
+        .header {
+          .title {
+          }
+
+          .info {
+            svg {
+            }
+          }
+        }
+
+        .total-amount {
+          font-size: 1.4rem;
+          line-height: 1.1;
+        }
+
+        .changes {
+          font-size: 12px;
+          margin-top: 5px;
+
+          .amount {
+          }
+
+          .text {
+          }
+        }
+      }
+
+      .second-section {
+        .graph {
+          .graph-icon {
+            height: 28px;
+            width: 28px;
+            svg {
+            }
+          }
+
+          .graph-label {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 550px) {
+}
+
+@media only screen and (min-width: 992px) {
+  .small-card {
+    .content {
+      .first-section {
+        .header {
+          .title {
+          }
+
+          .info {
+            svg {
+            }
+          }
+        }
+
+        .total-amount {
+        }
+
+        .changes {
+          .amount {
+          }
+
+          .text {
+          }
+        }
+      }
+
+      .second-section {
+        .graph {
+          .graph-icon {
+            svg {
+            }
+          }
+
+          .graph-label {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .small-card {
+    .content {
+      .first-section {
+        .header {
+          .title {
+          }
+
+          .info {
+            svg {
+            }
+
+            .tooltiptext {
+              // left: -100px;
+            }
+          }
+        }
+
+        .total-amount {
+        }
+
+        .changes {
+          .amount {
+          }
+
+          .text {
+          }
+        }
+      }
+
+      .second-section {
+        .graph {
+          .graph-icon {
+            svg {
+            }
+          }
+
+          .graph-label {
+          }
+        }
+      }
+    }
+  }
+}

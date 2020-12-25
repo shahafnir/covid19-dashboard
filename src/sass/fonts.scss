@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Open Sans Hebrew";
+  font-weight: 300; /*(light)*/
+  font-style: italic;
+  src: url("../assets/fonts/OpenSansHebrew-LightItalic.09413253a6528abedf5e.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans Hebrew";
+  font-weight: 400; /*(regular)*/
+  font-style: normal;
+
+  src: url("../assets/fonts/OpenSansHebrew-Regular.dc71bbd9d1e333b1902a.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans Hebrew";
+  font-weight: 700; /*(bold)*/
+  font-style: normal;
+  src: url("../assets/fonts/OpenSansHebrew-Bold.5ef117b3d8e874a8b93b.ttf")
+    format("truetype");
+}

@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
 export class StatisticsService {
-  URL = 'http://localhost:3000';
+  URL = environment.covid19API;
   constructor(private http: HttpClient) {}
 
   async getTestsReportByDate(date: string) {

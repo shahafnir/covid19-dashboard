@@ -98,44 +98,46 @@
     .second-section {
       .graph {
         position: relative;
-        width: fit-content;
-        margin-bottom: 2px;
-        display: flex;
-        align-items: flex-end;
-        align-items: center;
-        cursor: pointer;
-
-        .graph-icon {
-          height: 25px;
-          width: 25px;
-          background-color: var(--small-card-graph-icon-background);
-          border-radius: 50%;
-          border: 1px solid #97979738;
-          padding: 4px;
-          margin-left: 5px !important;
-          transition: all 0.5s;
-          -webkit-transition: all 0.5s;
-          -moz-transition: all 0.5s;
-          -ms-transition: all 0.5s;
-          -o-transition: all 0.5s;
-
-          svg {
-            margin-bottom: 2px;
-          }
-        }
 
         .graph-label {
-          font-size: 0.9rem;
-          text-align: center;
+          width: fit-content;
+          display: flex;
+          align-items: center;
+          margin-bottom: 2px;
+          cursor: pointer;
+
+          .icon {
+            height: 25px;
+            width: 25px;
+            background-color: var(--small-card-graph-icon-background);
+            border-radius: 50%;
+            border: 1px solid #97979738;
+            padding: 4px;
+            margin-left: 5px !important;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -o-transition: all 0.5s;
+
+            svg {
+              margin-bottom: 2px;
+            }
+          }
+
+          .text {
+            font-size: 14.4px;
+            text-align: center;
+          }
         }
 
         .graph-window {
           visibility: hidden;
           position: absolute;
-          width: calc(100vw - 20px) !important;
+          width: calc(100vw - 20px);
           height: 342px;
-          top: 41px;
-          left: -37px;
+          bottom: 41px;
+          left: -9%;
           background-color: var(--small-card-graph-window-background);
           border-radius: 12px !important;
           -webkit-border-radius: 12px !important;
@@ -146,26 +148,44 @@
           cursor: default;
           z-index: 1;
 
+          &.down {
+            bottom: 0;
+            top: 41px;
+
+            .arrow {
+              bottom: 0;
+              top: -11px;
+              border-top: transparent;
+              border-bottom: 11px solid
+                var(--small-card-graph-window-arrow-outer-color);
+
+              &::after {
+                top: 3px;
+                border-top: transparent;
+                border-bottom: 8px solid
+                  var(--small-card-graph-window-arrow-inner-color);
+              }
+            }
+          }
+
           .arrow {
             position: absolute;
             width: 0;
             height: 0;
-            top: -22px;
+            bottom: -22px;
             left: calc(50% - 11px);
-            border: 0 solid transparent;
             border: 11px solid transparent;
-            border-bottom: 11px solid
+            border-top: 11px solid
               var(--small-card-graph-window-arrow-outer-color);
 
             &::after {
               position: absolute;
               width: 0;
               height: 0;
-              top: -5px;
+              top: -11px;
               left: calc(50% - 8px);
-              border: 0 solid transparent;
               border: 8px solid transparent;
-              border-bottom: 8px solid
+              border-top: 8px solid
                 var(--small-card-graph-window-arrow-inner-color);
               z-index: 3;
               content: "";
@@ -191,50 +211,14 @@
     -o-transition: box-shadow 0.5s;
 
     .content {
-      .first-section {
-        .header {
-          .title {
-          }
-
-          .info {
-            svg {
-            }
-
-            .tooltiptext {
-            }
-
-            &:hover {
-              .tooltiptext {
-              }
-            }
-          }
-        }
-
-        .total-amount {
-        }
-
-        .changes {
-          .amount {
-          }
-
-          .text {
-          }
-        }
-      }
-
       .second-section {
         .graph {
-          .graph-icon {
-            background-color: var(--small-card-graph-icon-background-active);
-            color: var(--small-card-graph-icon-color-active);
-
-            svg {
+          .graph-label {
+            .icon {
+              background-color: var(--small-card-graph-icon-background-active);
+              color: var(--small-card-graph-icon-color-active);
             }
           }
-
-          .graph-label {
-          }
-
           .graph-window {
             visibility: visible;
           }
@@ -252,16 +236,6 @@
 
     .content {
       .first-section {
-        .header {
-          .title {
-          }
-
-          .info {
-            svg {
-            }
-          }
-        }
-
         .total-amount {
           font-size: 1.4rem;
           line-height: 1.1;
@@ -270,26 +244,18 @@
         .changes {
           font-size: 12px;
           margin-top: 5px;
-
-          .amount {
-          }
-
-          .text {
-          }
         }
       }
 
       .second-section {
         .graph {
-          .graph-icon {
-            height: 28px;
-            width: 28px;
-            svg {
-            }
-          }
-
           .graph-label {
             font-size: 15px;
+
+            .graph-icon {
+              height: 28px;
+              width: 28px;
+            }
           }
         }
       }
@@ -297,88 +263,13 @@
   }
 }
 
-@media only screen and (min-width: 550px) {
-}
-
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 551px) {
   .small-card {
     .content {
-      .first-section {
-        .header {
-          .title {
-          }
-
-          .info {
-            svg {
-            }
-          }
-        }
-
-        .total-amount {
-        }
-
-        .changes {
-          .amount {
-          }
-
-          .text {
-          }
-        }
-      }
-
       .second-section {
         .graph {
-          .graph-icon {
-            svg {
-            }
-          }
-
-          .graph-label {
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  .small-card {
-    .content {
-      .first-section {
-        .header {
-          .title {
-          }
-
-          .info {
-            svg {
-            }
-
-            .tooltiptext {
-              // left: -100px;
-            }
-          }
-        }
-
-        .total-amount {
-        }
-
-        .changes {
-          .amount {
-          }
-
-          .text {
-          }
-        }
-      }
-
-      .second-section {
-        .graph {
-          .graph-icon {
-            svg {
-            }
-          }
-
-          .graph-label {
+          .graph-window {
+            width: 400px;
           }
         }
       }

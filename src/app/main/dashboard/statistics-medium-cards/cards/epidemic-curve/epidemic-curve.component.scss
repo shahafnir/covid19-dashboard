@@ -1,0 +1,31 @@
+.statistics-card-medium {
+  .card-header {
+    .header-textarea {
+      .legend {
+        .legend-items {
+          .legend-item {
+            .color-circle {
+              &.color-1 {
+                background-color: #b6ca51;
+              }
+
+              &.color-2 {
+                background-color: #51cbfd;
+              }
+
+              &.color-3 {
+                background-color: #51cbfd;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1401px) {
+  .statistics-card-medium {
+    margin-right: 20px;
+  }
+}

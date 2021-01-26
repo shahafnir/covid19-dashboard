@@ -16,6 +16,19 @@
   --small-card-graph-window-arrow-outer-color: #d1d0d0;
   --small-card-graph-window-arrow-inner-color: #fff;
   --small-card-graph-window-box-shadow: #0000005c 0 0 20px 0;
+  --highCharts-area-small-backgroundColor: #fff;
+  --highCharts-area-small-gridLineColor: #d2c3b8;
+  --medium-card-background: #fff;
+  --medium-card-background-dark: #e6f1f4;
+  --medium-card-background-darker: #cedfe2;
+  --highCharts-area-medium-backgroundColor: #fff;
+  --highCharts-line-medium-backgroundColor: #fff;
+  --highCharts-line-medium-gridLineColor: #d2c3b8;
+  --large-card-background: #fff;
+  --large-card-background-darker: #e6f1f3;
+  --large-card-background-dark: #e6f1f4;
+  --large-card-cities-table-header-background: #daeaee;
+  --large-card-cities-table-data-background: #eff5f980;
 }
 
 @mixin dark-theme {
@@ -36,4 +49,18 @@
   --small-card-graph-window-arrow-outer-color: #384f5f;
   --small-card-graph-window-arrow-inner-color: #384f5f;
   --small-card-graph-window-box-shadow: #0000005c 0 0 20px 0;
+  --highCharts-area-small-backgroundColor: #384f5f;
+  --highCharts-area-small-gridLineColor: transparent;
+  --medium-card-background: #384f5f;
+  --medium-card-background-dark: #2a3c47;
+  --medium-card-background-darker: #344146;
+  --highCharts-area-medium-backgroundColor: #384f5f;
+  --highCharts-line-medium-backgroundColor: #384f5f;
+  --highCharts-line-medium-gridLineColor: transparent;
+  --large-card-background: #384f5f;
+  --large-card-background-dark: #2a3c47;
+  --large-card-background-darker: #344146;
+  --large-card-cities-table-header-background: #344146;
+  --large-card-cities-table-data-background: #304553;
+  --large-card-cities-table-data-background: #304553;
 }

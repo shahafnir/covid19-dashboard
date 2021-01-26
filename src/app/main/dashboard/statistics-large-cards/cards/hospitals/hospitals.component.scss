@@ -1,0 +1,98 @@
+.hospitals {
+  .card-body {
+    &::-webkit-scrollbar-thumb {
+      background-color: transparent;
+    }
+
+    .hospitals-table {
+      .table-row {
+        .table-header {
+          &:nth-of-type(4) {
+            width: 60px;
+          }
+        }
+
+        .table-data {
+          height: 50px !important;
+
+          .progress-bar-container {
+            display: inline-block;
+            width: 30px;
+            height: 10px;
+            margin: auto 0;
+            margin-left: 5px;
+            background-color: #eff5f9;
+            cursor: pointer;
+            overflow: hidden;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+            .progress-bar {
+              height: 100%;
+              background-color: #00ccff;
+
+              &:hover,
+              &:active {
+                background-color: #59dfff;
+              }
+
+              &.full {
+                background-color: #3d566a;
+              }
+            }
+          }
+
+          .data {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 551px) {
+  .hospitals {
+    .card-body {
+      .hospitals-table {
+        .table-row {
+          .table-header {
+            &:nth-of-type(4) {
+              width: 23%;
+            }
+          }
+
+          .table-data {
+            height: 51px !important;
+
+            .progress-bar-container {
+              width: 38px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 651px) {
+  .hospitals {
+    .card-body {
+      .hospitals-table {
+        .table-row {
+          .table-header {
+            &:nth-of-type(4) {
+              width: 26%;
+            }
+          }
+
+          .table-data {
+            .progress-bar-container {
+              width: 55px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

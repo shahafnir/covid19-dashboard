@@ -1,0 +1,25 @@
+<div class="statistics-card-medium">
+  <div class="card-header">
+    <div class="header-textarea">
+      <div class="title-container">
+        <span class="title">מגמת שינוי במאומתים חדשים וקצב הכפלה</span>
+      </div>
+      <div class="update-info">
+        <div class="info-icon">i</div>
+        <div class="info-text">
+          % שינוי בממוצע מאומתים חדשים שבועי, ומספר הימים להכפלת הנדבקים
+          (בסוגריים)
+        </div>
+      </div>
+    </div>
+  </div>
+  <highcharts-chart
+    id="changeInPositive"
+    *ngIf="chartOptions"
+    class="medium-card-highcharts-area-container"
+    [(update)]="updateFlag"
+    [oneToOne]="oneToOneFlag"
+    [Highcharts]="Highcharts"
+    [options]="chartOptions"
+  ></highcharts-chart>
+</div>

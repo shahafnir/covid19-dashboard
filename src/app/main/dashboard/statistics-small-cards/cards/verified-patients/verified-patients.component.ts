@@ -16,25 +16,23 @@ export class VerifiedPatientsComponent implements OnInit {
 
   constructor(private statisticsService: StatisticsService) {}
 
-  ngOnInit(): void {
-    this.statisticsService
-      .getTestsReport('2020-01-02')
-      .subscribe((testsReport) => {
-        this.positiveYesterday = testsReport['positive'];
-      });
+  async ngOnInit() {
+    const testsReportYesterday = await this.statisticsService.getTestsReportByDate(
+      '2020-12-30'
+    );
+    this.positiveYesterday = testsReportYesterday['positive'];
+
+    const testsReportToday = await this.statisticsService.getTestsReportByDate(
+      '2020-12-31'
+    );
+    this.positiveToday = testsReportToday['positive'];
 
     this.statisticsService
-      .getTestsReport('2020-01-03')
-      .subscribe((testsReport) => {
-        this.positiveToday = testsReport['positive'];
-      });
-
-    this.statisticsService
-      .getStatistics('2020-01-03')
+      .getStatisticsByDate('2020-12-31')
       .subscribe((statistics) => {
         const tests = statistics['tests'];
-        const comulative = tests['comulative'];
-        this.totalPositive = comulative['positive'];
+        const cumulative = tests['cumulative'];
+        this.totalPositive = cumulative['positive'];
       });
   }
 }

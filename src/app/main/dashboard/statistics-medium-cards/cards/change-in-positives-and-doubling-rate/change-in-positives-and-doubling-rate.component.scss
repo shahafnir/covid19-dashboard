@@ -1,0 +1,13 @@
+highcharts-chart {
+  &.medium-card-highcharts-container {
+    .highcharts-container {
+      .highcharts-root {
+        .highcharts-axis {
+          .highcharts-axis-line {
+            stroke: transparent;
+          }
+        }
+      }
+    }
+  }
+}

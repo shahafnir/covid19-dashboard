@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 import { StatisticsSmallCardsComponent } from './statistics-small-cards.component';
 import { VerifiedPatientsComponent } from './cards/verified-patients/verified-patients.component';
@@ -19,7 +20,7 @@ import { TestsTakenComponent } from './cards/tests-taken/tests-taken.component';
     DeceasedComponent,
     TestsTakenComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, HighchartsChartModule],
   exports: [StatisticsSmallCardsComponent],
 })
 export class StatisticsSmallCardsModule {}

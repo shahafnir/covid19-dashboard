@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StatisticsService } from './../../../../../shared/statistics/statistics.service';
 
 @Component({
   selector: 'app-severe-patients',
@@ -9,7 +10,42 @@ import { Component, OnInit } from '@angular/core';
   ],
 })
 export class SeverePatientsComponent implements OnInit {
-  constructor() {}
+  severeTotal: number;
+  criticalTotal: number;
+  mediumTotal: number;
+  severeToday: number;
 
-  ngOnInit(): void {}
+  constructor(private statisticsServie: StatisticsService) {}
+
+  ngOnInit(): void {
+    let severeTotalYesterday = 0;
+
+    this.statisticsServie
+      .getStatisticsByDate('2020-12-30')
+      .subscribe((statistics) => {
+        const patientsBySeverityLevelsYesterday =
+          statistics['patients']['bySeverityLevels'];
+
+        severeTotalYesterday =
+          patientsBySeverityLevelsYesterday['high'] +
+          patientsBySeverityLevelsYesterday['critical'];
+      });
+
+    this.statisticsServie
+      .getStatisticsByDate('2020-12-31')
+      .subscribe((statistics) => {
+        const patientsBySeverityLevels =
+          statistics['patients']['bySeverityLevels'];
+
+        this.severeTotal =
+          patientsBySeverityLevels['high'] +
+          patientsBySeverityLevels['critical'];
+
+        this.criticalTotal = patientsBySeverityLevels['critical'];
+
+        this.mediumTotal = patientsBySeverityLevels['medium'];
+
+        this.severeToday = this.severeTotal - severeTotalYesterday;
+      });
+  }
 }

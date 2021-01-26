@@ -1,0 +1,81 @@
+<div class="statistics-card-medium">
+  <div class="card-header">
+    <div class="header-textarea">
+      <div class="title-container">
+        <span class="title">חולים קשה ומונשמים</span>
+      </div>
+      <div class="update-info">
+        <div class="info-icon">i</div>
+        <div class="info-text">
+          סה"כ <b>{{ totalSeverePatients }}</b> חולים קשה ו-
+          <b>{{ totalBreathalysedPatients }}</b> מונשמים
+          <b>מאז תחילת המשבר (דצמבר 2020)</b>
+        </div>
+      </div>
+      <div class="legend">
+        <ul class="legend-items">
+          <li class="legend-item">
+            <div class="color-circle color-1"></div>
+            <div class="text">חולים קשה</div>
+          </li>
+          <li class="legend-item">
+            <div class="color-circle color-2"></div>
+            <div class="text">מונשמים</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="range-select-button-container">
+      <button class="range-select-button" (click)="openRangesList()">
+        <div class="text">{{ selectedRange }}</div>
+        <div class="icon" [ngClass]="{ flip: displayRangesList }">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            width="100%"
+            height="100%"
+            viewBox="0 0 24 24"
+          >
+            <g data-name="Layer 2">
+              <g data-name="chevron-down">
+                <rect width="24" height="24" opacity="0"></rect>
+                <path
+                  d="M12 15.5a1 1 0 0 1-.71-.29l-4-4a1 1 0 1 1 1.42-1.42L12 13.1l3.3-3.18a1 1 0 1 1 1.38 1.44l-4 3.86a1 1 0 0 1-.68.28z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </button>
+      <ul class="range-list-items" *ngIf="displayRangesList">
+        <li
+          class="range-item"
+          *ngFor="let range of rangesList"
+          (click)="onPickRange(range)"
+        >
+          {{ range }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <highcharts-chart
+    *ngIf="chartOptions"
+    class="medium-card-highcharts-line-container"
+    [(update)]="updateFlag"
+    [oneToOne]="oneToOneFlag"
+    [Highcharts]="Highcharts"
+    [options]="chartOptions"
+  ></highcharts-chart>
+  <svg style="height: 0">
+    <defs>
+      <linearGradient id="gradient-0" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" />
+        <stop offset="1" />
+      </linearGradient>
+      <linearGradient id="gradient-1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" />
+        <stop offset="1" />
+      </linearGradient>
+    </defs>
+  </svg>
+</div>

@@ -1,0 +1,62 @@
+<div class="statistics-card-medium">
+  <div class="card-header">
+    <div class="header-textarea">
+      <div class="title-container">
+        <span class="title">עקומה אפידמית</span>
+      </div>
+      <div class="update-info">
+        <div class="info-icon">i</div>
+        <div class="info-text">
+          מספר הנדבקים היום הינו <b>כפול</b> מהמספר
+          <b> לפני {{ daysFromHalfInfectedCount || 0 | number }} ימים</b>
+        </div>
+      </div>
+      <div class="legend">
+        <ul class="legend-items">
+          <li class="legend-item">
+            <div
+              class="color-circle color-1"
+              style="background-color: #1e898a"
+            ></div>
+            <div class="text">מאומתים חדשים</div>
+          </li>
+          <li class="legend-item">
+            <div
+              class="color-circle color-2"
+              style="background-color: #969696"
+            ></div>
+            <div class="text">מחלימים חדשים</div>
+          </li>
+          <li class="legend-item">
+            <div
+              class="color-circle color-3"
+              style="background-color: #51cbfd"
+            ></div>
+            <div class="text">מאומתים מצטבר</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <highcharts-chart
+    id=""
+    *ngIf="chartOptions"
+    class="medium-card-highcharts-column-area-container"
+    [(update)]="updateFlag"
+    [oneToOne]="oneToOneFlag"
+    [Highcharts]="Highcharts"
+    [options]="chartOptions"
+  ></highcharts-chart>
+  <svg style="height: 0">
+    <defs>
+      <linearGradient id="gradient-0" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" />
+        <stop offset="1" />
+      </linearGradient>
+      <linearGradient id="gradient-1" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" />
+        <stop offset="1" />
+      </linearGradient>
+    </defs>
+  </svg>
+</div>

@@ -32,9 +32,9 @@
           </div>
         </div>
       </div>
-      <h5 class="total-amount">{{ 27718 | number }}</h5>
+      <h5 class="total-amount">{{ totalActive || 0 | number }}</h5>
       <div class="changes">
-        <span class="amount">{{ 159 | number }}+</span>
+        <span class="amount">{{ activeToday || 0 | number }}+</span>
         <span class="text">מחצות</span>
       </div>
     </div>
@@ -42,15 +42,15 @@
       <div class="patients-per-location">
         <div class="item">
           <div class="label">בית / קהילה</div>
-          <div class="amount">{{ 26265 | number }}</div>
+          <div class="amount">{{ hospitalization.community | number }}</div>
         </div>
         <div class="item">
           <div class="label">מלון</div>
-          <div class="amount">{{ 600 | number }}</div>
+          <div class="amount">{{ hospitalization.hotel | number }}</div>
         </div>
         <div class="item">
           <div class="label">בי"ח</div>
-          <div class="amount">{{ 853 | number }}</div>
+          <div class="amount">{{ hospitalization.hospital | number }}</div>
         </div>
       </div>
     </div>

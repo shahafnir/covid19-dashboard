@@ -32,9 +32,9 @@
           </div>
         </div>
       </div>
-      <h5 class="total-amount">{{ 499 | number }}</h5>
+      <h5 class="total-amount">{{ severeTotal || 0 | number }}</h5>
       <div class="changes">
-        <span class="amount">{{ 4 | number }}+</span>
+        <span class="amount">{{ severeToday || 0 | number }}+</span>
         <span class="text">מחצות</span>
       </div>
     </div>
@@ -43,12 +43,12 @@
         <div class="item">
           <div class="circle" style="background-color: #fb5377"></div>
           <div class="label">מתוכם קריטי</div>
-          <div class="amount">{{ 156 | number }}</div>
+          <div class="amount">{{ criticalTotal || 0 | number }}</div>
         </div>
         <div class="item">
           <div class="circle" style="background-color: #e6b957"></div>
           <div class="label">בינוני</div>
-          <div class="amount">{{ 161 | number }}</div>
+          <div class="amount">{{ mediumTotal || 0 | number }}</div>
         </div>
       </div>
     </div>

@@ -1,0 +1,173 @@
+<div class="large-card hospitals">
+  <div class="card-header">
+    <div class="header-textarea">
+      <div class="title-container">
+        <span class="title">סטטוס בתי החולים</span>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <table class="statistics-table hospitals-table">
+      <tr class="table-row">
+        <th class="table-header">
+          <button
+            class="sorting-button"
+            name="name"
+            (click)="onSortHospitals($event.target.name)"
+          >
+            בית חולים
+          </button>
+          <div class="arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              viewBox="0 0 24 24"
+            >
+              <g data-name="Layer 2">
+                <g data-name="arrow-downward">
+                  <rect
+                    width="24"
+                    height="24"
+                    transform="rotate(-90 12 12)"
+                    opacity="0"
+                  ></rect>
+                  <path
+                    d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05 2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </th>
+        <th class="table-header">
+          <button
+            class="sorting-button"
+            name="occupancyPercentage-General"
+            (click)="onSortHospitals($event.target.name)"
+          >
+            % תפוסה כללי
+          </button>
+          <div class="arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              viewBox="0 0 24 24"
+            >
+              <g data-name="Layer 2">
+                <g data-name="arrow-downward">
+                  <rect
+                    width="24"
+                    height="24"
+                    transform="rotate(-90 12 12)"
+                    opacity="0"
+                  ></rect>
+                  <path
+                    d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05 2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </th>
+        <th class="table-header">
+          <button
+            class="sorting-button"
+            name="occupancyPercentage-Covid19"
+            (click)="onSortHospitals($event.target.name)"
+          >
+            % תפוסת קורונה
+          </button>
+          <div class="arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              viewBox="0 0 24 24"
+            >
+              <g data-name="Layer 2">
+                <g data-name="arrow-downward">
+                  <rect
+                    width="24"
+                    height="24"
+                    transform="rotate(-90 12 12)"
+                    opacity="0"
+                  ></rect>
+                  <path
+                    d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05 2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </th>
+        <th class="table-header">
+          <button
+            class="sorting-button"
+            name="staffInIsolation"
+            (click)="onSortHospitals($event.target.name)"
+          >
+            אנשי צוות מאומתים ובבידוד
+          </button>
+          <div class="arrow">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              viewBox="0 0 24 24"
+            >
+              <g data-name="Layer 2">
+                <g data-name="arrow-downward">
+                  <rect
+                    width="24"
+                    height="24"
+                    transform="rotate(-90 12 12)"
+                    opacity="0"
+                  ></rect>
+                  <path
+                    d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05 2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </th>
+      </tr>
+      <tr class="table-row" *ngFor="let hospital of hospitals">
+        <td class="table-data">{{ hospital["name"] }}</td>
+        <td class="table-data">
+          <div class="progress-bar-container">
+            <div
+              class="progress-bar"
+              [style.width.%]="hospital['occupancyPercentage']['general']"
+              [ngClass]="{
+                full: hospital['occupancyPercentage']['general'] >= 100
+              }"
+            ></div>
+          </div>
+          <div class="data">
+            {{ hospital["occupancyPercentage"]["general"] }}%
+          </div>
+        </td>
+        <td class="table-data">
+          <div class="progress-bar-container">
+            <div class="progress-bar" style="width: 0"></div>
+          </div>
+          <div class="data" style="color: #9aa1a7">
+            {{
+              hospital["occupancyPercentage"]["covid19"] === 0
+                ? "אין מידע"
+                : hospital["occupancyPercentage"]["covid19"]
+            }}
+          </div>
+        </td>
+        <td class="table-data">
+          <div class="data">
+            {{ hospital["staffInIsolation"]["total"] }}
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

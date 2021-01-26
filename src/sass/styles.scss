@@ -1,15 +1,20 @@
+@import "https://code.highcharts.com/css/highcharts.css";
 @import "./variables";
 @import "./mixins";
 @import "./fonts.scss";
+@import "./highcharts-area-small";
+@import "./highcharts-area-medium";
+@import "./highcharts-column-area-medium";
+@import "./highcharts-line-medium";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $font-family-default !important;
+  -webkit-font-smoothing: antialiased !important;
 }
 
 body {
   direction: rtl;
-  font-family: $font-family-default;
-  -webkit-font-smoothing: antialiased;
 }

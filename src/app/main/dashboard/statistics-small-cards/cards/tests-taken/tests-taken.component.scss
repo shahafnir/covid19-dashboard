@@ -11,12 +11,6 @@
     .total-amount {
       margin-top: 8px;
     }
-
-    .changes {
-    }
-  }
-
-  .second-section {
   }
 }
 
@@ -37,12 +31,6 @@
       .total-amount {
         margin-top: 8px;
       }
-
-      .changes {
-      }
-    }
-
-    .second-section {
     }
   }
 }
@@ -50,22 +38,9 @@
 @media only screen and (min-width: 493px) {
   .small-card .content {
     .first-section {
-      .header {
-        .info {
-          .tooltiptext {
-          }
-        }
-      }
-
       .total-amount {
         margin-top: 6px;
       }
-
-      .changes {
-      }
-    }
-
-    .second-section {
     }
   }
 }
@@ -81,13 +56,6 @@
             }
           }
         }
-        .changes {
-        }
-
-        .patients-per-location {
-          .item {
-          }
-        }
       }
     }
   }
@@ -97,22 +65,9 @@
   .small-card .content {
     margin-top: 0;
     .first-section {
-      .header {
-        .info {
-          .tooltiptext {
-          }
-        }
-      }
-
       .total-amount {
         margin-top: 8px;
       }
-
-      .changes {
-      }
-    }
-
-    .second-section {
     }
   }
 }
@@ -127,15 +82,6 @@
           }
         }
       }
-
-      .total-amount {
-      }
-
-      .changes {
-      }
-    }
-
-    .second-section {
     }
   }
 }
